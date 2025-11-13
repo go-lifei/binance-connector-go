@@ -406,11 +406,11 @@ func (s *QuerySubAccountAssetsService) Do(ctx context.Context, opts ...RequestOp
 
 type QuerySubAccountAssetsResp struct {
 	Balances []struct {
-		Freeze      string `json:"freeze"`
-		Withdrawing string `json:"withdrawing"`
+		Freeze      float64 `json:"freeze"`
+		Withdrawing float64 `json:"withdrawing"`
 		Asset       string `json:"asset"`
-		Free        string `json:"free"`
-		Locked      string `json:"locked"`
+		Free        float64 `json:"free"`
+		Locked      float64 `json:"locked"`
 	} `json:"balances"`
 }
 
